@@ -1,0 +1,194 @@
+body {
+  background-color: #bbb;
+}
+
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 475px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 650px;
+  background-color: #1a2c5fe8;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 6px 9px 0 rgba(18, 30, 255, 0.06);
+          box-shadow: 0 6px 9px 0 rgba(18, 30, 255, 0.06);
+}
+
+.calculator .screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  background-color: #323030;
+  border-radius: 20px;
+  height: 153px;
+  overflow: hidden;
+}
+
+.calculator .screen .last-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #b0b0b0;
+  padding-top: 50px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.calculator .screen .first-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 28px;
+  font-family: sans-serif;
+  color: white;
+  margin-right: 20px;
+}
+
+.calculator .keybord {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+  padding-top: 5px;
+  justify-items: center;
+}
+
+.calculator .keybord .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 99%;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  font-size: 28px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.calculator .keybord .button:hover {
+  background-color: #ffffffc7;
+}
+
+.calculator .keybord .button-none {
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+.calculator .keybord .division,
+.calculator .keybord .multiplication,
+.calculator .keybord .soustraction,
+.calculator .keybord .addition {
+  color: #fa8576;
+}
+
+.calculator .keybord .action-btn {
+  color: white;
+  background-color: #fa8576;
+}
+
+.calculator .keybord .action-btn:hover {
+  background-color: #fa8576d2;
+}
+
+.calculator .history-calcul {
+  z-index: 1000;
+  position: absolute;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 475px;
+  width: 97%;
+  height: 400px;
+  top: 280px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: -webkit-transform .12s ease-in-out;
+  transition: -webkit-transform .12s ease-in-out;
+  transition: transform .12s ease-in-out;
+  transition: transform .12s ease-in-out, -webkit-transform .12s ease-in-out;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  font-family: sans-serif;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.calculator .history-calcul .history-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.calculator .history-calcul .history-title h2 {
+  color: black;
+  font-size: 28px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+
+.calculator .history-calcul .history-title .fas {
+  margin-top: 30px;
+  padding-right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.calculator .history-calcul .last-calcul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.calculator .history-calcul .last-calcul span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.calculator .history-calcul::-webkit-scrollbar {
+  width: 5px;
+}
+/*# sourceMappingURL=styles.css.map */

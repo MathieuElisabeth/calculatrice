@@ -1,0 +1,151 @@
+body {
+  background-color: #bbb;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  max-width: 475px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 650px;
+  background-color: #1a2c5fe8;
+  border-radius: 30px;
+  box-shadow: 0 6px 9px 0 rgba(18, 30, 255, .06);
+
+  .screen {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: #323030;
+    border-radius: 20px;
+    height: 153px;
+    overflow: hidden;
+
+    .last-number {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 18px;
+      font-family: sans-serif;
+      color: #b0b0b0;
+      padding-top: 50px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+
+    .first-number {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 28px;
+      font-family: sans-serif;
+      color: white;
+      margin-right: 20px;
+    }
+  }
+
+  .keybord {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+    padding-top: 5px;
+    justify-items: center;
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 99%;
+      text-align: center;
+      color: black;
+      font-weight: bold;
+      background-color: white;
+      font-size: 28px;
+      font-family: sans-serif;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ffffffc7;
+      }
+    }
+
+    .button-none {
+      border-radius: 50px;
+      background-color: transparent;
+    }
+
+    .division,
+    .multiplication,
+    .soustraction,
+    .addition {
+      color: #fa8576;
+    }
+
+    .action-btn {
+      color: white;
+      background-color: #fa8576;
+
+      &:hover {
+        background-color: #fa8576d2;
+      }
+    }
+  }
+
+  .history-calcul {
+    z-index: 1000;
+    position: absolute;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 475px;
+    width: 97%;
+    height: 400px;
+    top: 280px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    transform: scaleY(0);
+    transition: transform .12s ease-in-out;
+    transform-origin: bottom;
+    font-family: sans-serif;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    .history-title {
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        color: black;
+        font-size: 28px;
+        margin-bottom: 30px;
+        padding-left: 10px;
+      }
+
+      .fas {
+        margin-top: 30px;
+        padding-right: 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .last-calcul {
+      display: flex;
+      font-size: 24px;
+      padding-left: 10px;
+      margin-bottom: 10px;
+
+      span {
+        font-weight: bold;
+        margin-left: 5px;
+
+      }
+    }
+  }
+
+  .history-calcul::-webkit-scrollbar {
+    width: 5px;
+  }
+}
